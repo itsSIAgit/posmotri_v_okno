@@ -50,14 +50,12 @@ ol {
 }
 
 .content {
-  inline-size: 100%;
   padding: 133px 30px;
   display: flex;
   gap: 30px;
 }
 
 .result {
-  inline-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
