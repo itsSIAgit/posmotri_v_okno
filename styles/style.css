@@ -66,10 +66,14 @@ ol {
 
 .result__video-container {
   position: relative;
+  inline-size: 100%;
+  block-size: 386px;
 }
 
 .result__video {
   inline-size: 100%;
+  block-size: 100%;
+  object-fit: fill;
 }
 
 .search-form {
@@ -157,7 +161,6 @@ ol {
 .button {
   inline-size: 100%;
   min-block-size: 34px;
-  align-self: flex-end;
   border: 1px solid #fff;
   text-align: center;
   font-family: inherit;
@@ -183,6 +186,10 @@ ol {
 
 .button:active {
   background-color: #545050;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
 }
 
 .content__details {
@@ -212,10 +219,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow: visible hidden;
-}
-
-.content__list:hover {
   overflow: visible scroll;
 }
 
@@ -244,7 +247,11 @@ ol {
 
 .content__video-card {
   display: flex;
-  justify-content: space-between;
+}
+
+.content__video-card-description-container {
+  inline-size: 1%;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
@@ -253,6 +260,9 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -260,13 +270,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
-
-  /* 
-  Есть названия городов (например, Зеленоградск)
-  которым нехватает места с картинкой и не-оверлейным скроллом,
-  тогда картинка сжимается, не вызывая изменения размера всего блока
-  */
-
-  inline-size: 100%;
-  max-inline-size: 194px;
+  inline-size: 194px;
+  block-size: 107px;
+  object-fit: cover;
 }
