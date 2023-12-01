@@ -140,6 +140,10 @@ ol {
   outline-offset: 2px;
 }
 
+.search-form__label:active:has(:focus-visible) {
+  outline: none;
+}
+
 .search-form__pseudo-checkbox {
   inline-size: 19px;
   block-size: 19px;
